@@ -1,0 +1,14 @@
+{
+  "name": "bun-epoll-timer-spin-repro",
+  "version": "1.0.0",
+  "description": "Reproduces Bun 1.3.14 busy-spinning a full CPU core on a 1 ms timer chain when epoll_pwait2 is unavailable (Linux < 5.11)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "spin": "bun spin.ts",
+    "matrix": "sh ./run.sh"
+  },
+  "dependencies": {
+    "kafkajs": "2.2.4"
+  }
+}
